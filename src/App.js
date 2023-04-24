@@ -6,13 +6,6 @@ import "react-tabs/style/react-tabs.css";
 import "animate.css";
 import "./App.css";
 
-// test
-
-// useMemo
-// useRef
-
-// lazy
-
 function App() {
   return (
     <div className="app">
