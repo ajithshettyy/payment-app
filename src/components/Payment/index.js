@@ -18,6 +18,7 @@ function Payment() {
     setPaymentInProgress(true);
     e.preventDefault();
     const stripe = await loadStripe(Config.publishableKey);
+    alert(JSON.stringify(product));
     const session = await payment(product);
 
     const result = stripe.redirectToCheckout({
@@ -29,8 +30,8 @@ function Payment() {
     }
   };
 
-  const setValue = async (e) => {
-    setProduct({ [e.target.name]: e.target.value, ...product });
+  const setValue = async (fieldname, e) => {
+    setProduct({ ...product, [fieldname]: e.target.value });
   };
 
   return (
@@ -39,9 +40,8 @@ function Payment() {
         <h4>Name</h4>
         <input
           type="text"
-          name="name"
           placeholder="Please enter your full name"
-          onChange={setValue}
+          onChange={(e) => setValue("name", e)}
           required
         />
       </div>
@@ -50,9 +50,8 @@ function Payment() {
         <h4>Email</h4>
         <input
           type="text"
-          name="email"
           placeholder="Please enter your email"
-          onChange={setValue}
+          onChange={(e) => setValue("email", e)}
           required
         />
       </div>
@@ -62,12 +61,11 @@ function Payment() {
           <h4>Amount</h4>
           <input
             type="number"
-            name="amount"
             min={1}
             max={100000}
             placeholder="Amount"
             required
-            onChange={setValue}
+            onChange={(e) => setValue("amount", e)}
           />
         </div>
         <ThreeDots
