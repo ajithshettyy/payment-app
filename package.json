@@ -8,6 +8,9 @@
     "@testing-library/user-event": "^12.1.10",
     "animate.css": "^4.1.1",
     "cleave.js": "^1.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
+    "prettier": "^2.8.8",
     "react": "^18.0.2",
     "react-dom": "^18.0.2",
     "react-scripts": "4.0.3",
@@ -36,5 +39,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
