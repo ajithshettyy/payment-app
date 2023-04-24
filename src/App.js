@@ -8,6 +8,11 @@ import "./App.css";
 
 // test
 
+// useMemo
+// useRef
+
+// lazy
+
 function App() {
   return (
     <div className="app">
