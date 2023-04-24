@@ -1,5 +1,5 @@
 const Config = {
-  api: "http://localhost:3000/api",
+  api: "https://nodejs-serverless-function-express-psi-two.vercel.app/api",
 };
 
 export default Config;
