@@ -19,14 +19,20 @@ body {
   background-repeat: no-repeat;
 }
 
+.app{
+  height: 1200px;
+  width: 1200px;
+}
+
 .container {
   max-width: 1200px;
-  margin: auto;
+  min-width: none;
+  margin: 15% 25%;
 }
 
 #form {
   background: #fff;
-  max-width: 500px;
+  max-width: 600px;
   max-height: 100%;
   display: flex;
   justify-content: center;
@@ -169,4 +175,17 @@ body {
   height: 75px;
 }
 
-/*# sourceMappingURL=/styles.164d45a1.css.map */
+table {
+  border: 2px solid #ccc;
+  width: 800px;
+  height: 200px;
+}
+  
+th {
+  border-bottom: 1px solid black;
+}
+  
+td {
+  text-align: center;
+}
+
