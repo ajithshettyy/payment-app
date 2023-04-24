@@ -18,7 +18,7 @@ const cardImages = {
 
 const years = [2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030];
 
-let months = [
+const months = [
   "January",
   "February",
   "March",
