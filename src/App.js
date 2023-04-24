@@ -4,7 +4,7 @@ import Cleave from "cleave.js/react";
 import "animate.css";
 import "./App.css";
 
-const cardImages = {
+let cardImages = {
   visa: "https://logos-world.net/wp-content/uploads/2020/04/Visa-Logo.png",
   mastercard:
     "https://brand.mastercard.com/content/dam/mccom/brandcenter/thumbnails/mastercard_vrt_rev_92px_2x.png",
