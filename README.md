@@ -1,3 +1,10 @@
+# Assumptions made
+
+Due to time limit Authentication of app and API are skipped, please assume that post authentication you will land on this APP
+
+Live Demo: https://react-payment-app.vercel.app/
+
+Backend: https://github.com/ajithshettyy/nodejs-serverless-function-express
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
