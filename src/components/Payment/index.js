@@ -17,8 +17,11 @@ function Payment() {
   const makePayment = async (e) => {
     setPaymentInProgress(true);
     e.preventDefault();
+    if (!product.name || !product.email) {
+      alert("Please Enter Required Values");
+      return;
+    }
     const stripe = await loadStripe(Config.publishableKey);
-    alert(JSON.stringify(product));
     const session = await payment(product);
 
     const result = stripe.redirectToCheckout({
@@ -65,6 +68,7 @@ function Payment() {
             max={100000}
             placeholder="Amount"
             required
+            value={product.amount}
             onChange={(e) => setValue("amount", e)}
           />
         </div>
