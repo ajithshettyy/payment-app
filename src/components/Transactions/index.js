@@ -22,7 +22,7 @@ function Transactions() {
         <tr>
           <td>{transaction.id}</td>
           <td>{transaction.amount}</td>
-          <td>{transaction.created}</td>
+          <td>{transaction.created.toLocaleString()}</td>
           <td>{transaction.status}</td>
         </tr>
       ))}
